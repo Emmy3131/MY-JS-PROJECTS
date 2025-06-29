@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body class="body">
+ <style>
+  .div{
+    background-color: cornflowerblue;
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .body{
+    background-color: brown;
+  }
+    .form{
+      display: flex;
+      flex-direction: column;
+       gap: 20px;
+    }
+  .input{
+    width: 100%;
+    padding: 10px 2px;
+    overflow: scroll;
+  }
+
+  .btn{
+    border-radius: 10px;
+    padding: 10px 3px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size:20px ;
+    border: none;
+  }
+  .btn:hover{
+    background-color: blue;
+    color: brown;
+  }
+  #totalQuantity{
+    color: #ccc;
+    font-size: 20px;
+  }
+  #totalPrice{
+     color: red;
+    font-size: 20px;
+  }
+</style>
+
+  <div class="div">
+    <form action="" class="form" id="form">
+      <input placeholder="input ur item here" class="input" type="text" id="item">
+      <input placeholder="input the quantity here" type="number" class="input" id="quantity">
+      <input placeholder="price for each" type="number" class="input" id="price">
+      <button class="btn" id="btn">Check</button>
+    </form>
+     <p id="message"><span id="totalQuantity"></span>  <span id="totalPrice"></span></p>
+  </div>
+  <script src="product1.js"></script>
+</body>
+</html>

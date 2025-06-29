@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dice.css">
+</head>
+<body>
+    
+   <div class="body">
+    <div class="section">
+        <button id="btn-new" class="btn-new">New Game</button>
+        <div class="players">
+            <aside class="active player-0-panel" id="player-0-panel">
+                <h1 class="player-name" id="name-0">
+                    PLAYER 1
+                </h1>
+                <h2 class="result" id="score-0">
+                    45
+                </h2>
+                <div class="current">
+                    <h3>
+                        CURRENT
+                    </h3>
+                    <h2 class="current-result"  id="current-0">
+                        10
+                    </h2>
+                </div>
+            </aside>
+            <aside class="image">
+                <div id="images">
+                    <img id="image" class="img-1" src="image-1.jpg" alt="">
+                </div>
+                <div id="dice-text">
+                    <button id="btn-shuffle" class="btn-shuffle">Shuffle</button>
+                    <button class="btn-hold" id="hold">Hold</button>
+                   <input type="number" class="final-score" id="final-score">
+                </div>
+            </aside>
+            <aside class="player-1-panel" id="player-1-panel" >
+                <h1 class="player-name" id="name-1">
+                    PLAYER 2
+                </h1>
+                <h2 class="result" id="score-1">
+                    23
+                </h2>
+                <div class="current">
+                    <h3>
+                        CURRENT
+                    </h3>
+                    <h2 class="current-result"  id="current-1">
+                        14
+                    </h2>
+                </div>
+            </aside>
+        </div>
+    </div>
+   </div>
+
+   <script src="script.js"></script>
+   <!-- <script src="dice.js"></script> -->
+</body>
+</html>

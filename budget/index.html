@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget</title>
+    <link rel="stylesheet" href="tailwind/output.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Header Section-->
+    <div class="">
+        <div class="shadow-md">
+            <div class="max-w-7xl mx-auto flex md:px-0 px-3  items-center justify-between  py-5">
+                <div class="">
+                    <h1 class="text-2xl font-bold">
+                        Budget
+                    </h1>
+                </div>
+                <div class="flex items-center">
+                    <div>
+                        <i class="far fa-bell text-2xl mr-8"></i>
+                    </div>
+                    <div class="mr-3">
+                        <img src="./images/BeautyPlus_20220211163948056_save.jpg" class="w-[40px] h-[40px] rounded-full" alt="">
+                    </div>
+                    <div>
+                        <select name="" id="" class="text-xl pr-2">
+                            <option value="" class="border-none outline-none">Emmanuel</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner section -->
+    <div class="my-[50px]">
+        <div class="max-w-7xl mx-auto">
+           <div class="md:flex block justify-between md:px-0 px-4 items-center">
+            <!-- First Banner Aside -->
+                <div class="bg-[#0D4054] md:w-[30%] w-full md:mb-0 mb-5 p-5 rounded-md">
+                    <div class="bg-[#266075] mb-3 h-10 w-10 rounded-full flex justify-center items-center">
+                        <i class="fas fa-window-maximize text-white text-xl align-middle  items-center"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-slate-300">
+                            Available Budget in <span id="date-label" >October, 2024</span>
+                        </h1>
+                        <h1 id="budget" class="text-white mt-2 text-2xl font-bold">
+                            &#x20A6; 9,500.00
+                        </h1>
+                    </div>
+                </div>
+                <!-- Second Banner Aside -->
+                <div class="bg-[#eefaff] md:w-[30%] w-full md:mb-0 mb-5 p-5 rounded-md">
+                    <div class="flex justify-between">
+                        <div class="bg-[#266075] mb-3 h-10 w-10 rounded-full flex justify-center items-center">
+                            <i class="fas fa-window-maximize text-white text-xl align-middle  items-center"></i>
+                        </div>
+        
+                    </div>
+                    <div>
+                        <h1 class="text-black font-bold">
+                            Income
+                        </h1>
+                        <h1 id="income" class="text-black mt-2 text-2xl font-bold">
+                            &#x20A6; 10,000.00
+                        </h1>
+                    </div>
+                </div>
+                <!-- Third Aside Banner -->
+                <div class="bg-[#fef3f2] md:w-[30%] w-full p-5 rounded-md">
+                    <div class="flex justify-between">
+                        <div class="bg-[#f5d7d4] mb-3 h-10 w-10 rounded-full flex justify-center items-center">
+                            <i class="fas fa-window-maximize text-[#f44336] text-xl align-middle  items-center"></i>
+                        </div>
+                        <div>
+                            <h1 id="exp-percentage" class="text-[#f44336]">
+                                51
+                            </h1>
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="text-black b font-bold">
+                            Expenses
+                        </h1>
+                        <h1 id="expenses" class="text-black mt-2 text-2xl font-bold">
+                            &#x20A6; 500.00
+                        </h1>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <!-- Select Field -->
+     <div class="my-[30px]">
+         <div class="max-w-7xl mx-auto">
+            <form action="" class="md:text-start text-center" id="add-form">
+                <div class="md:flex inline-block justify-between items-center border-2 p-3 rounded-md">
+                    <select name="" id="type" class="form-group focus-within:border-[#28b9b5] md:w-[13%] outline-none w-full md:mb-0 mb-5 border-2 border-black p-[10px] rounded-md">
+                        <option value="inc" class="overflow-hidden">Income</option>
+                        <option value="exp">Expenses</option>
+                    </select>
+                    <div class="form-group focus-within:border-[#28b9b5] flex items-center md:mb-0 mb-5 border-2 rounded-md pl-2 border-black">
+                        <label for="" class="mr-2">Item</label> 
+                        <input  type="text" value="" id="item" class="w-full text-lg font-bold outline-none pl-2 py-2 border-l-2 rounded-md border-black">
+                    </div> 
+                    <div class="form-group focus-within:border-[#28b9b5] flex items-center md:mb-0 mb-5 border-2 rounded-md pl-2 border-black">
+                        <label for="" class="mr-2">Quantity</label> 
+                        <input  type="number" value="" id="quantity" class="w-[40px] text-lg font-bold outline-none pl-2 py-2 border-l-2 rounded-md border-black">
+                    </div> 
+                    <div class="form-group focus-within:border-[#28b9b5] flex items-center md:mb-0 mb-5 border-2 rounded-md pl-2 border-black">
+                        <label for="" class="mr-2">Unit Price</label> 
+                        <input type="number" value="" id="unit-price" class="w-[100px] text-lg font-bold outline-none pl-2 py-2 border-l-2 rounded-md border-black">
+                    </div> 
+                    <div class="form-group focus-within:border-[#28b9b5] border-2 border-black py-2 px-2 rounded-md md:mb-0 mb-5">
+                        <input class="outline-none" type="date" id="date">
+                    </div> 
+                    <!-- <div class="md:mb-0 mb-5">
+                        <input type="text" placeholder="description" id="description" class="w-full font-bold border-2 border-black py-2 px-2 rounded-md">
+                    </div> -->
+                    <div class="ml-4">
+                        <button type="button" id="add-btn" class=" py-2 px-4 bg-[#0d4054] text-white rounded-md">Add Record</button>
+                    </div>   
+                </div>  
+            </form>   
+         </div>
+     </div>
+
+     <!-- Display Field -->
+      <div class="my-[30px]">
+           <div class="max-w-7xl mx-auto">
+                <div class="md:flex block gap-5 md:px-0 px-3" id="items-container">
+                     <!--Income Container  -->
+                    <aside  class="md:w-[50%] w-full md:mb-0 mb-5 border-2 py-5 px-3 rounded-md">
+                        <div class="flex border-b-2 py-3 px-2 justify-between">
+                            <div>
+                                <h1 class="font-bold">
+                                    Income
+                                </h1>
+                            </div>
+                            
+                        </div>
+                        <div id="income-continer">
+                          <!-- <div id="inc-1" class="flex md:flex-nowrap flex-wrap md:gap-0 gap-8 md:text-start text-center border-2 rounded-md mt-5 px-2 py-5">
+                                <div class="mr-5">
+                                    <p class="text-xs">
+                                        Item
+                                    </p>
+                                    <h1 class="font-medium">
+                                        Built site
+                                    </h1>
+                                </div>
+                                <div class="mr-5">
+                                    <p class="text-xs">
+                                        Quantity
+                                    </p>
+                                    <h1 class="font-medium">
+                                        0
+                                    </h1>
+                                </div>
+                                <div class="mr-5">
+                                    <p class="text-xs">
+                                        Date
+                                    </p>
+                                    <h1 class="font-medium">
+                                       09/10/2024
+                                    </h1>
+                                </div>
+                                <div class="mr-5">
+                                    <p class="text-xs">
+                                        Unit Price
+                                    </p>
+                                    <h1 class="flex items-center gap-2 font-medium">
+                                        <span>&#x20A6;</span> 2,000.00
+                                    </h1>
+                                </div>
+                                <div class="mr-5">
+                                    <p class="text-xs">
+                                        Total Price
+                                    </p>
+                                    <h1 class="flex items-center gap-2 font-medium">
+                                        <span>&#x20A6;</span> 2,000.00
+                                    </h1>
+                                </div>
+                                <div class="md:mx-0 mx-auto">
+                                    <p class="text-xs">
+                                        Action
+                                    </p>
+                                    <i id="delete-btn" class="fas fa-trash-alt"></i>
+                                   
+                                </div>
+                            </div> -->
+                        </div>
+                    </aside>
+                    <!-- Expenses Container -->
+                    <aside class="md:w-[50%] w-full border-2 py-5 px-3 rounded-md">
+                        <div class="flex border-b-2 py-3 px-2 justify-between">
+                            <div>
+                                <h1 class="font-bold">
+                                    Expenses
+                                </h1>
+                            </div>
+                            
+                        </div>
+                        <div id="expenses-continer">
+                            <!-- <div  class="flex  md:flex-nowrap flex-wrap md:gap-0 gap-8 md:text-start text-center border-2 rounded-md mt-5 px-2 py-5">
+                                <div class="mr-5">
+                                    <p class="text-xs">
+                                        Item
+                                    </p>
+                                    <h1 class="font-medium">
+                                        Built site
+                                    </h1>
+                                </div>
+                                <div class="mr-5">
+                                    <p class="text-xs">
+                                        Quantity
+                                    </p>
+                                    <h1 class="font-medium">
+                                        0
+                                    </h1>
+                                </div>
+                                <div class="mr-5">
+                                    <p class="text-xs">
+                                        Date
+                                    </p>
+                                    <h1 class="font-medium">
+                                    09/10/2024
+                                    </h1>
+                                </div>
+                                <div class="mr-5">
+                                    <p class="text-xs">
+                                        Unit Price
+                                    </p>
+                                    <h1 class="flex items-center gap-2 font-medium">
+                                        <span>&#x20A6;</span> 2,000.00
+                                    </h1>
+                                </div>
+                                <div class="mr-5">
+                                    <p class="text-xs">
+                                        Total Price
+                                    </p>
+                                    <h1 class="flex items-center gap-2 font-medium">
+                                        <span>&#x20A6;</span> 2,000.00
+                                    </h1>
+                                </div>
+                                <div class="mr-5">
+                                    <p class="text-xs">
+                                        percentage
+                                    </p>
+                                    <h1 class="flex items-center gap-2 font-medium">
+                                       10%
+                                    </h1>
+                                </div>
+                                <div class="md:mx-0 mx-auto">
+                                    <p class="text-xs">
+                                        Action
+                                    </p>
+                                    <div class="text-center text-red-400 mt-2">
+                                        <i id="delete-btn" class="fas fa-trash-alt"></i>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </aside>
+                </div>
+           </div>
+      </div>
+
+      
+      <script src="js/script.js"></script>
+</body>
+</html>

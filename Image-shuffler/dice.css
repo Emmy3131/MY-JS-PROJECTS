@@ -1,0 +1,96 @@
+body{
+    background-color: rgb(238, 229, 217);
+}
+html{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+}
+.section{
+    max-width: 900px;
+    margin: 50px auto;
+}
+.btn-new{
+    display: block;
+    padding: 10px 25px;
+    margin: 0 auto 30px auto;
+    background-color: tomato;
+    color: white;
+    border: none;
+}
+.players{
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+.active{
+    background-color: white;
+}
+.player-0-panel,
+.player-1-panel{
+    width: 30%;
+    text-align: center;
+    padding: 40px;
+}
+.player-name{
+    color: slategrey;
+    position: relative;
+}
+.active .player-name::after{
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #eb4d4d;
+    top: -20px;
+    right: -0px;
+}
+.result{
+    font-size: 70px;
+    color: tomato;
+}
+.current{
+    background-color: tomato;
+    display: inline-block;
+    padding: 1px 25px;
+   /* width: 50%; */
+}
+.current-result{
+    color: white;
+}
+.image{
+    text-align: center;
+    position: relative;
+    padding: 15px 50px;
+}
+
+.img-1{
+    width: 200px;
+    display: block;
+
+}
+#dice-text{
+    position: absolute;
+    bottom: 0;
+    color: slategrey;
+    left: 0;
+    
+}
+.btn-shuffle{
+    padding: 5px 15px;
+}
+.btn-hold{
+    padding: 5px 15px;
+    margin-bottom: 15px;
+}
+#btn{
+    padding: 7px 13px;
+}
+.test{
+    background-color: green;
+}
+.winner {
+    background-color: #f7f7f7;
+}
+.winner .player-name{
+    font-weight: 300;
+    color: #eb4d4d;
+}

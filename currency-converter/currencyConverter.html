@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .container{
+      max-width: 400px;
+      margin: auto;
+      background-color: blue;
+      margin-top: 100px;
+      border-radius: 10px;
+    }
+    .form{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 15px;
+    }
+    .label{
+      display: block;
+      width: 40px;
+    }
+    .select{
+      /* width: 48%; */
+      padding: 10px 5px;
+      border-radius: 5px;
+    }
+    .input{
+      width: 45%;
+      padding: 10px 5px;
+      border-radius: 5px;
+    }
+    .btn{
+      background-color: rgb(35, 35, 52);
+      cursor: pointer;
+      padding: 10px 5px;
+      border-radius: 5px;
+      width: 100px;
+      margin: auto;
+      border: none;
+      color: white;
+      font-size: 22px;
+    }
+
+    .btn:hover{
+      background-color: aqua;
+      color: yellowgreen;
+    }
+
+    .div1{
+      display: flex;
+      gap: 10px;
+    }
+
+    .select-group{
+      width: 50%;
+    }
+
+    select{
+      width: 100%;
+    }
+
+  </style>
+
+  <div class="container">
+    <form action="" class="form">
+      <div class="div1">
+        <div class="select-group">
+          <label class="label">From</label>
+          <select class="select" name="" id="from">
+              <option value="">--Select--</option>
+              <option value="naira">Naira</option>
+              <option value="dollar">Doller</option>
+          </select>
+        </div>
+        
+        <div class="select-group">
+          <label class="label">To</label>
+          <select class="select" name="" id="to">
+            <option value="">--Select--</option>
+            <option value="naira">Naira</option>
+            <option value="dollar">Doller</option>
+          </select>
+        </div>
+          
+      </div>
+
+      <div>
+            <input class="input" placeholder="Amount to be converted" id="amount" type="number">
+            <input class="input" placeholder="converted Amount" type="number" id="result">
+      </div>
+
+      <button type="button" id="btn" class="btn">Convert</button>
+    </form>
+  </div>
+
+  <script src="currencyConverter.js"></script>
+</body>
+</html>

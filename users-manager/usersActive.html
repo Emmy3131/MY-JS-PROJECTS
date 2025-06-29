@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>activeUsers</title>
+</head>
+<style>
+  .container{
+    background-color: cornflowerblue;
+    width: 700px;
+    margin: auto;
+    padding: 10px;
+  }
+  table, thead, th, tbody, tr, td{
+    border: 1px solid yellow;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: auto;
+  }
+</style>
+<body>
+ <section class="container">
+  <select id="status">
+    <option value="all">All</option>
+    <option value="active">Active</option>
+    <option value="deactive">Deactive</option>
+    <option value="pending">Pending</option>
+  </select>
+  <table class="table">
+    <thead>
+    <th>S/N</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Contact</th>
+    <th>Email</th>
+    <th>Status</th>
+   </thead>
+
+    <tbody id="tableBody">
+      <tr>
+        <td>01</td>
+        <td>Emmanuel</td>
+        <td>Mbano</td>
+        <td>07011053181</td>
+        <td>devinechild@gmail.com</td>
+        <td>active</td>
+      </tr>
+    </tbody>
+  </table>
+
+ </section>
+
+<script src="activeUsers.js"></script>
+</body>
+</html>

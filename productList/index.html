@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AllProduct</title>
+</head>
+<style>
+  .body{
+    background-color: blueviolet;
+  }
+
+  .container{
+    max-width: 500px;
+    border-radius: 2px;
+    margin: 10px auto;
+    padding: 5px;
+    border: 1px solid;
+    box-shadow: 3px 5px 0px;
+  }
+  h1{
+    text-align: center;
+    font-weight: lighter;
+  }
+  label, select, input{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: 500;
+  }
+  input{
+    width: 475px;
+  }
+  .btn{
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    background-color: #ccc;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .btn:hover{
+    background-color: blueviolet;
+    color: #ccc;
+  }
+  .btn-container{
+    width: 200px;
+    margin: 10px auto;
+  }
+  .myCart{
+    background-color: #ccc;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .cartHeader{
+    text-align: center;
+    font-size: 23px;
+  }
+  .productCards{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h2, p{
+    margin: 0px;
+  }
+  .cartbtn{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 21px;
+    width: 150px;
+    background-color: blueviolet;
+    color: #ccc;
+  }
+  .cartbtn:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+  }
+
+  table, thead, th, tbody, tr, td{
+    border: 1px solid yellow;
+    border-collapse: collapse;
+    padding: 5px;
+    margin: auto;
+
+  }
+  table{
+    width: 100%;
+  }
+
+  .btnd{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: yellow;
+    color: red;
+    cursor: pointer;
+  }
+  .btnd:hover{
+    background-color: red;
+    color: yellow;
+    
+  }
+
+  .custom-dropdown {
+    position: relative;
+    width: 200px;
+  }
+
+  .dropdown-list {
+    display: none;
+    border: 1px solid #ccc;
+    position: absolute;
+    width: 100%;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+  }
+
+  .dropdown-list li {
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .dropdown-list li:hover {
+    background: #f0f0f0;
+  }
+
+</style>
+
+<body class="body">
+  <div class="container">
+    <h1>Product List</h1>
+    <div>
+      <label>Choose product here</label>
+      <div class="custom-dropdown">
+        <input type="text" id="productName" placeholder="Select product" readonly />
+        <ul id="productList" class="dropdown-list">
+          
+        </ul>
+      </div>
+
+      <label for="">Quantity</label>
+      <input type="number" id="quantity">
+      <label for="">Price each</label>
+      <input id="priceInput" type="number" disabled>
+      <div class="btn-container">
+        <button class="btn" id="btnAdd">Add</button>
+      </div>
+    </div>
+
+    <div class="myCart">
+      <h2 class="cartHeader">My list</h2>
+     <table>
+      <thead>
+        <th>ProductName</th>
+        <th>Quantity</th>
+        <th>Price each</th>
+        <th>Total Price</th>
+      </thead>
+      <tbody id="cartBody">
+        <!-- <tr>
+          <td>Tecno</td>
+          <td>2</td>
+          <td>120000</td>
+          <td>240000</td>
+          <td><button id="btn">Delet</button></td>
+        </tr> -->
+        
+      </tbody>
+     </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
