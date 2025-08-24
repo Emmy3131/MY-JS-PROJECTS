@@ -1,34 +1,37 @@
-
-var budgetController = (function(){
-   console.log("Budget controller running")
-   var sum = function(a , b){
-    return a + b
-   }
-
-   
-   return{
-    sum:sum(2, 7)
-   }
-   
+var budgeController = (function(){
+  function greet(name){
+    console.log(`Hello ${name}`)
+  }
+  return{
+    greet
+  }
 })()
+budgeController.greet('Emmanuel');
 
-var UIController = (function(){
-    console.log('U controller i running');
 
-    return{
-        printResult:function(num){
-            console.log(num);
-            
-        }
+var uiController = (function(){
+  function checkAge(){
+    var currentYear = 2025
+    var dateOfBirth = 1998;
+    var age = currentYear - dateOfBirth
+    console.log(`your age is ${age}`)
+  }
+  return{
+    checkAge
+  }
+})()
+uiController.checkAge()
+
+
+var AppController = (function(budgetctr, uictr){
+  document.getElementById('add-btn').addEventListener('click',function(){
+    console.log('App is running')
+    uictr.checkAge()
+  })
+  return{
+    init: function(){
+      console.log('App control is running')
     }
-})()
-
-
-var controller = (function(budgetCtrl,UICtrl){
-    console.log('Controller is running');
-    console.log(budgetCtrl);
-    UICtrl.printResult(budgetCtrl.sum)
-    
-    
-})(budgetController,UIController)
+  }
+})(budgeController, uiController)
 

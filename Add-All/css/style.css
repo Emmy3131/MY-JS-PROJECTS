@@ -1,0 +1,368 @@
+/*
+
+    "build": "parcel build index.html --dist-dir build --public-url ./"
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+nav{
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+header{
+  background-color: #f4f4f4;
+  padding: 15px;
+}
+main{
+  padding: 20px;
+  text-align: center;
+  background-image:url('../productImage/image-2.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.container{
+  max-width: 800px;
+  margin: auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 15% auto;
+}
+
+input{
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+} 
+.searchIcon{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: -30px;
+  top: 6px;
+  cursor: pointer;
+}
+
+.cart-section {
+  position: fixed;
+  top: 0;
+  right: -300px;      
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+  transition: right 0.4s ease;  
+  padding: 20px;
+  z-index: 1000;
+}
+
+.cart-section.active {
+  right: 0;
+}
+
+
+.cart-list{
+  position: relative;
+  left: 0;
+  top: 0;
+  text-align: center;
+  background-color: orangered;
+  color: white;
+  border-radius: 50%;
+  padding: 10px 6px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.cartImageProduct{
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.cart-item{
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.cart-item-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.cart-summary{
+  margin-top: 20px;
+  text-align: center;
+}
+#shop-now-btn{
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#shop-now-btn:hover{
+  background-color: orange;
+  color: #333;
+}
+.hero-title{
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.section-title{
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin: 20px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: rgba(246, 207, 136, 0.964);
+  padding: 20px 0;
+}
+.product-container{
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 70px;
+  /* gap: 20px; */
+  flex-wrap: wrap;
+  background-color: rgba(248, 235, 213, 0.8);
+}
+
+.product-image-container{
+  box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  max-width:  340px;;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image{
+  max-width: 100%;
+}
+.product-details-box{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name-tag{
+  font-weight: bold;
+}
+.price-tag{
+  color: orangered;
+}
+/*******************************MODAL ********* */
+/* Overlay background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* semi-transparent backdrop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+}
+
+/* Main box */
+.modal-content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 700px;
+  min-height: 400px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+  padding: 20px;
+}
+
+/* Close button */
+.close-modal {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.close-modal:hover {
+  background-color: #f3f3f3;
+}
+
+/* Inner content layout */
+.modal-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Recipe image */
+.modal-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Details section */
+.modal-details {
+  flex: 1;
+}
+.recipe-title {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #333;
+}
+.ingredients {
+  list-style: disc;
+  margin: 0 0 15px 20px;
+  padding: 0;
+  color: #555;
+}
+.modal-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Button */
+.learn-more-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #2563eb; /* Tailwind primary-ish */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+.learn-more-btn:hover {
+  background-color: #1d4ed8;
+}
+
+
+.like-icon {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.like-icon i {
+  font-size: 18px;
+  color: #bbb; /* inactive state */
+}
+
+.like-icon:hover {
+  transform: scale(1.1);
+}
+
+.like-icon.active i {
+  color: #e63946; /* red when liked */
+}
+
+/******************hide modal **** */
+.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+.pro-details-image{
+  max-width: 600px;
+  height: 500px;
+}
+
+.title-box{
+  color: #333;
+  
+}
+
+.times-icon{
+  position: absolute;
+  right: 40px;
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+
+}
+
+
+/* Outer container */
+.spinner-container {
+  display: flex;              /* flexbox */
+  justify-content: center;    /* center horizontally */
+  align-items: center;        /* center vertically */
+  height: 16rem;              /* h-64 → 64 * 0.25rem = 16rem (256px) */
+  margin: 0 auto;
+}
+
+/* Spinner */
+.spinner {
+  height: 3rem;               /* h-12 → 12 * 0.25rem = 3rem (48px) */
+  width: 3rem;                /* w-12 */
+  border-radius: 50%;         /* rounded-full */
+  border-top: 2px solid #1a202c; /* border-primary-dark substitute */
+  border-bottom: 2px solid #1a202c;
+  border-left: 2px solid transparent; /* optional for nicer effect */
+  border-right: 2px solid transparent;
+  animation: spin 1s linear infinite; /* animate-spin */
+  margin: 0 auto;             /* mx-auto */
+}
+
+/* Spin animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

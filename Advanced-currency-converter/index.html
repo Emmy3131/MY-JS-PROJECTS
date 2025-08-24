@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <h1>Advance currency converter</h1>
+   <div class="container">
+  <div class="currency-container">
+    <div class="currency-box">
+      <label for="">Select currency here</label>
+      <div>
+        <select class="input-group" id="currency">
+          <option value="">--Select--</option>
+          <option class="currency-list" value="ngn">Naira</option>
+          <option class="currency-list" value="usd">Usd</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="currency-box">
+      <label for="">Select network here</label>
+      <div>
+        <select class="input-group" id="network">
+          <option value="">--Select--</option>
+          <option class="currency-list" value="bitcoin">Bitcoin</option>
+          <option class="currency-list" value=" ethereum"> Ethereum</option>
+          <option value="usdt" >Usdt</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="currency-container">
+    <div class="currency-box">
+      <label for="">Rate</label>
+      <div>
+        <input class="input-group" type="text" id="amount" placeholder="Enter amount">
+      </div>
+    </div>
+
+    <div class="currency-box">
+      <label for="">Rate</label>
+      <div>
+        <input class="input-group" type="text" id="result" disabled>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

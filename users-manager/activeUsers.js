@@ -37,7 +37,7 @@ var fetchusers = [
   {
     name: 'james',
     address: 'mbano',
-    contact: '07011053181',
+    contact: +234-7011053181,
     email: 'devinechild@gmail.com',
     status: 'deactive'
   }
@@ -65,20 +65,15 @@ function displayUsers(fetchusers){
 }
 displayUsers(fetchusers)
 
-function filterUsersByStatus(status) {
-    var filtered = [];
-    for (var i = 0; i < fetchusers.length; i++) {
-      if (status === "all" || fetchusers[i].status === status) {
-        filtered.push(fetchusers[i]);
-      }
-    }
-    return filtered;
-  }
 
 var Status = document.getElementById('status');
 Status.addEventListener('change', function(){
  var selectedStatus = this.value;
- var filteredUsers = filterUsersByStatus(selectedStatus);
+
+// const filteredUsers = fetchusers.filter(function(user){
+//   if(user.status === selectedStatus) return user
+// })
+const filteredUsers = fetchusers.filter(currentUser=> currentUser.status === selectedStatus)
  displayUsers(filteredUsers);
 })
 

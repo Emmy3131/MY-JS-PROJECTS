@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>api</title>
+</head>
+  <style>
+    #adviceBody{
+      margin: 0 auto;
+      background-color: grey;
+      padding: 10px;
+      border-radius: 5px;
+      width: 500px;
+    }
+
+    #adviceBoxs{
+      background-color: #ccc;
+      text-align: center;
+      padding: 10px;
+    }
+    button{
+      width: 150px;
+      padding: 10px;
+      background-color: black;
+      color: #fff;
+      border-radius: 5px;
+      margin: 10px 32%;
+      text-align: center;
+      cursor: pointer;
+      transition: all .3s;
+      border: none;
+    }
+    button:hover{
+      background-color: blue;
+      color: red;
+    }
+    #para{
+      text-align: center;
+      color: rgba(6, 0, 12, 0.881);
+    }
+  </style>
+<body>
+  <div id="adviceBody">
+    <h1>Click the button to listen to your daily advice</h1>
+    <div id="adviceBoxs">
+      <!-- <p>what advice do you have for me today</p> -->
+    </div>
+
+    <button id="btn">
+      click me for next
+    </button>
+
+    <p id="para">
+      
+    </p>
+  </div>
+  <script src="api.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "parcel watch ./src/js/index.js --dist-dir ./dist/js"
+  },
+  "dependencies": {
+    "parcel": "^2.15.4"
+  }
+}
